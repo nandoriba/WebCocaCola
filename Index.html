@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html land="pt-br">
+        <head>
+        <meta charset="UTF-8">
+        <title>Coca-Cola-Simulador Site</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+         <section>
+             <div class="circle"></div>
+             <header>
+                 <a href="#"><img src="img/logo.png" class="logo"></a>
+                 <div class="alternancia" onclick="Alternancia()" ></div> 
+                 <ul class="menu">
+                     <li><a href="#">Inicio</a></li>
+                     <li><a href="#">Menu</a></li>
+                     <li><a href="#">Notícias</a></li>
+                     <li><a href="#">Contato</a></li>
+                 </ul>
+             </header>
+             <div class="conteudo">
+                 <div class="caixaTexto">
+                     <h2>Título do Texto</h2>
+                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                         Voluptates, minus atque ratione natus, sed, quis deleniti earum fuga omnis quas facere 
+                         nesciunt officiis harum. Totam explicabo assumenda quis facere at? Lorem, ipsum dolor 
+                         sit amet consectetur adipisicing elit. Fugiat explicabo facilis natus laboriosam culpa 
+                         blanditiis pariatur alias quis officiis mollitia, quod, iste numquam quia perferendis optio 
+                         dolore nam quam sit.
+                         <a href="#">Leia Mais</a>
+                     </p>
+                 </div>
+                 <div class="imgBox">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="img/cocacola1.png"> </div>
+                          <div class="swiper-slide"><img src="img/cocacola2.png"> </div>
+                          <div class="swiper-slide"><img src="img/cocacola3.png"> </div>
+                          <div class="swiper-slide"><img src="img/cocacola4.png"> </div>
+                          <div class="swiper-slide"><img src="img/cocacola5.png"> </div>
+                          <div class="swiper-slide"><img src="img/cocacola6.png"> </div>
+                        </div>                  
+                      </div>
+                 </div>
+             </div>
+             <ul class="redeSocial">
+                 <li><a href="#"><img src="img/facebook.png"></a></li>
+                 <li><a href="#"><img src="img/twitter.png"></a></li>
+                 <li><a href="#"><img src="img/instagram.png"></a></li>                 
+             </ul>
+         </section>
+         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+         <script>
+            var swiper = new Swiper('.swiper-container', {
+              effect: 'coverflow',
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: 'auto',
+              coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+              },
+              pagination: {
+                el: '.swiper-pagination',
+              },
+              loop: true,
+            });
+          </script>
+          <script>
+              function Alternancia(){
+                  const menuAlter = document.querySelector('.alternancia');
+                  const menu = document.querySelector('.menu') 
+                  menuAlter.classList.toggle('active')
+                  menu.classList.toggle('active')
+              }
+          </script>
+    </body>
+    </html>
+</html>
